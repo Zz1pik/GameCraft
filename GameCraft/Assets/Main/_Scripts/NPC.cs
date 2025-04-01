@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
 {
     public string npcName;
     public NPCTrait trait;
+    public Sprite npcSprite;
     public bool isThief = false;
     public QuestionDatabase questionDatabase;
 

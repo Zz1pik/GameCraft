@@ -5,11 +5,16 @@ using TMPro;
 
 public class Main : MonoBehaviour
 {
-    public static Main Instance { get; private set; } // Синглтон
+    public static Main Instance { get; private set; }
     public QuestionDatabase questionDatabase;
     public List<Button> questionButtons;
     public TMP_Text responseText;
+    public short questionCount = 6;
 
+    public SpriteRenderer npcImage; 
+    public SpriteRenderer TruthfuldialogueBackground;
+    public SpriteRenderer LiardialogueBackground;
+    public SpriteRenderer RandomdialogueBackground;
     public GameObject mapCanvas;
     public GameObject dialogueCanvas;
     public Button backButton;
@@ -32,7 +37,7 @@ public class Main : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); // Если `Main` уже есть, уничтожаем дубликат
+            Destroy(gameObject);
             return;
         }
     }
@@ -65,13 +70,13 @@ public class Main : MonoBehaviour
         selectedQuestions.Clear();
         List<QuestionEntry> allQuestions = new List<QuestionEntry>(questionDatabase.questions);
 
-        if (allQuestions.Count < 4)
+        if (allQuestions.Count < questionCount)
         {
             Debug.LogError("Недостаточно вопросов в базе!");
             return;
         }
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < questionCount; i++)
         {
             int index = Random.Range(0, allQuestions.Count);
             selectedQuestions.Add(allQuestions[index]);
@@ -117,6 +122,29 @@ public class Main : MonoBehaviour
         mapCanvas.SetActive(false);
         dialogueCanvas.SetActive(true);
         responseText.text = $"Разговор с {npc.npcName}";
+
+        if (npcImage != null && npc.npcSprite != null)
+        {
+            npcImage.sprite = npc.npcSprite;
+            npcImage.gameObject.SetActive(true);
+        }
+
+        TruthfuldialogueBackground.gameObject.SetActive(false);
+        LiardialogueBackground.gameObject.SetActive(false);
+        RandomdialogueBackground.gameObject.SetActive(false);
+
+        switch (npc.trait)
+        {
+            case NPCTrait.Truthful:
+                TruthfuldialogueBackground.gameObject.SetActive(true);
+                break;
+            case NPCTrait.Liar:
+                LiardialogueBackground.gameObject.SetActive(true);
+                break;
+            case NPCTrait.Random:
+                RandomdialogueBackground.gameObject.SetActive(true);
+                break;
+        }
     }
 
     void ExitDialogue()
@@ -124,6 +152,15 @@ public class Main : MonoBehaviour
         currentNPC = null;
         dialogueCanvas.SetActive(false);
         mapCanvas.SetActive(true);
+
+        TruthfuldialogueBackground.gameObject.SetActive(false);
+        LiardialogueBackground.gameObject.SetActive(false);
+        RandomdialogueBackground.gameObject.SetActive(false);
+
+        if (npcImage != null)
+        {
+            npcImage.gameObject.SetActive(false);
+        }
     }
 
     void AskQuestion(Button button)
@@ -155,7 +192,7 @@ public class Main : MonoBehaviour
     {
         if (npc == null) return;
 
-        isAccusing = false; // Выключаем режим обвинения после выбора
+        isAccusing = false; 
 
         if (npc == thief)
         {

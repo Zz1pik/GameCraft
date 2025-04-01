@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8846715657f02894a9c0aebbd58704b2
+guid: 7dff867ba89b0ac4787644057110a35b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6993360694152549052
-    second: Moly_0
+      213: -6284977932667244601
+    second: IMG_6647_0
+  - first:
+      213: 1799507073873722173
+    second: IMG_6647_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Moly_0
+      name: IMG_6647_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 238
+        y: 448
+        width: 1598
+        height: 1193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44dabd6408792fe90800000000000000
-      internalID: -6993360694152549052
+      spriteID: 7cf23369ed547c8a0800000000000000
+      internalID: -6284977932667244601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_6647_1
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 1072
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bbb05462229f810800000000000000
+      internalID: 1799507073873722173
       vertices: []
       indices: 
       edges: []
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Moly_0: -6993360694152549052
+      IMG_6647_0: -6284977932667244601
+      IMG_6647_1: 1799507073873722173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
