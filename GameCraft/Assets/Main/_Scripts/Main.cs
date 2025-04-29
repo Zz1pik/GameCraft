@@ -17,6 +17,10 @@ public class Main : MonoBehaviour
     public SpriteRenderer RandomdialogueBackground;
     public GameObject mapCanvas;
     public GameObject dialogueCanvas;
+    public GameObject notepadCanvas;
+    public bool isOpenNotepad;
+    public GameObject PersonalDataCanvas;
+    public bool isOpenPersonalData;
     public Button backButton;
     public Button accuseButton; 
 
@@ -24,9 +28,9 @@ public class Main : MonoBehaviour
     private Dictionary<Button, QuestionEntry> buttonQuestionMap = new Dictionary<Button, QuestionEntry>();
 
     public List<NPC> npcs;
-
     public NPC currentNPC { get; private set; }
     public NPC thief { get; private set; }
+
     private bool isAccusing = false;
 
     void Awake()
@@ -49,6 +53,46 @@ public class Main : MonoBehaviour
         dialogueCanvas.SetActive(false);
         backButton.onClick.AddListener(ExitDialogue);
         accuseButton.onClick.AddListener(EnterAccusationMode);
+    }
+
+    public void OpenAndCloseNotepad()
+    {
+        if (isOpenPersonalData)
+        {
+            isOpenPersonalData = false;
+            PersonalDataCanvas.SetActive(false);
+        }
+
+        if (isOpenNotepad)
+        {
+            isOpenNotepad = false;
+            notepadCanvas.SetActive(false);
+        }
+        else 
+        {
+            isOpenNotepad = true;
+            notepadCanvas.SetActive(true);
+        }
+    }
+
+    public void OpenAndClosePersonalData()
+    {
+        if (isOpenNotepad)
+        {
+            isOpenNotepad = false;
+            notepadCanvas.SetActive(false);
+        }
+
+        if (isOpenPersonalData)
+        {
+            isOpenPersonalData = false;
+            PersonalDataCanvas.SetActive(false);
+        }
+        else 
+        {
+            isOpenPersonalData = true;
+            PersonalDataCanvas.SetActive(true);
+        }
     }
 
     void ChooseThief()
@@ -112,6 +156,16 @@ public class Main : MonoBehaviour
 
     public void StartDialogue(NPC npc)
     {
+        if (isOpenNotepad){
+            isOpenNotepad = false;
+            notepadCanvas.SetActive(false);
+        }
+
+        if (isOpenPersonalData){
+            isOpenPersonalData = false;
+            PersonalDataCanvas.SetActive(false);
+        }
+
         if (isAccusing)
         {
             AccuseNPC(npc);
@@ -163,7 +217,7 @@ public class Main : MonoBehaviour
         }
     }
 
-    void AskQuestion(Button button)
+    public void AskQuestion(Button button)
     {
         if (currentNPC == null || !buttonQuestionMap.ContainsKey(button)) return;
 

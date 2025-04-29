@@ -46,5 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Lisa
   trait: 0
+  age: 1
+  height: 1
+  gender: 0
+  npcSprite: {fileID: 0}
+  npcAvatar: {fileID: 5328894139677964944, guid: 4fc0a06cd0ed60749a17c20bd7a6d0a3, type: 3}
   isThief: 0
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}

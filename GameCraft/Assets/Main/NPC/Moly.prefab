@@ -46,5 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Moly
   trait: 1
+  age: 0
+  height: 1
+  gender: 0
+  npcSprite: {fileID: 0}
+  npcAvatar: {fileID: -6993360694152549052, guid: 8846715657f02894a9c0aebbd58704b2, type: 3}
   isThief: 0
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}

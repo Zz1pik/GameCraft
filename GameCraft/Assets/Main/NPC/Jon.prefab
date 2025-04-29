@@ -46,5 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Jon
   trait: 1
-  isThief: 0
+  age: 1
+  height: 0
+  gender: 0
+  npcSprite: {fileID: 0}
+  npcAvatar: {fileID: -4874915710726505097, guid: 6734148e7475e8c4188b56c7535f29ca, type: 3}
+  isThief: 1
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}

@@ -46,6 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Olga
   trait: 2
+  age: 1
+  height: 0
+  gender: 0
   npcSprite: {fileID: -2619252209484329867, guid: 4b3bcdcb034855c4cba5396c22bd7d72, type: 3}
+  npcAvatar: {fileID: -4819160602199295881, guid: 378eb3ea80b38744e84e6d2f45079ce9, type: 3}
   isThief: 0
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}
