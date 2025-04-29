@@ -48,8 +48,8 @@ MonoBehaviour:
   trait: 0
   age: 1
   height: 1
-  gender: 0
-  npcSprite: {fileID: 0}
+  gender: 1
+  npcSprite: {fileID: 3767982617696241570, guid: 0cfa76103e2c1e941b917a0f412c856b, type: 3}
   npcAvatar: {fileID: 5328894139677964944, guid: 4fc0a06cd0ed60749a17c20bd7a6d0a3, type: 3}
-  isThief: 0
+  isThief: 1
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}

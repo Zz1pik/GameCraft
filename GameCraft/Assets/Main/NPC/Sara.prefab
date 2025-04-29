@@ -49,7 +49,7 @@ MonoBehaviour:
   age: 0
   height: 1
   gender: 0
-  npcSprite: {fileID: 0}
+  npcSprite: {fileID: -736404851287125076, guid: 4ad9b8d0d16ef9e4e8a6c0346b2dd315, type: 3}
   npcAvatar: {fileID: -5381368962363567767, guid: fe39262f27341b940b14281b9cd7899c, type: 3}
   isThief: 1
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}

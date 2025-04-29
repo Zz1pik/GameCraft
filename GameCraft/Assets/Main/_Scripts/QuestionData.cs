@@ -9,8 +9,6 @@ public class QuestionEntry
 
     public List<string> truthfulAnswers;
     public List<string> liarAnswers;
-    public List<string> thiefTruthfulAnswers;
-    public List<string> thiefLiarAnswers;
 }
 
 [CreateAssetMenu(fileName = "QuestionDatabase", menuName = "Game/QuestionDatabase")]

@@ -9,7 +9,7 @@ public class Main : MonoBehaviour
     public QuestionDatabase questionDatabase;
     public List<Button> questionButtons;
     public TMP_Text responseText;
-    public short questionCount = 6;
+    public short questionCount = 4;
 
     public SpriteRenderer npcImage; 
     public SpriteRenderer TruthfuldialogueBackground;

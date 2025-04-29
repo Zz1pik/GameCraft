@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8907982462699576562
+--- !u!1 &5105534236611476387
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4681953305803002373}
-  - component: {fileID: 4058972959479409682}
+  - component: {fileID: 555655316023355110}
+  - component: {fileID: 8316972740321390601}
   m_Layer: 0
-  m_Name: Max
+  m_Name: Kach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4681953305803002373
+--- !u!4 &555655316023355110
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8907982462699576562}
+  m_GameObject: {fileID: 5105534236611476387}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,24 +32,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4058972959479409682
+--- !u!114 &8316972740321390601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8907982462699576562}
+  m_GameObject: {fileID: 5105534236611476387}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3160b128c512cd47add4616801a9834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: Max
-  trait: 2
+  npcName: Kach
+  trait: 1
   age: 0
-  height: 0
+  height: 2
   gender: 1
-  npcSprite: {fileID: -5097045195447782377, guid: 06774169b56db65418c8ad1e6062f8e2, type: 3}
-  npcAvatar: {fileID: 2606193311958461929, guid: 65e7fc50a9dea224fb684ed9fdb78c29, type: 3}
-  isThief: 1
+  npcSprite: {fileID: 0}
+  npcAvatar: {fileID: 0}
+  isThief: 0
   questionDatabase: {fileID: 11400000, guid: e6e3e55b9cab63d48a644f414e3526d6, type: 2}
